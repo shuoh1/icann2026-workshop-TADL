@@ -118,6 +118,84 @@
     .btn:hover{background:rgba(255,255,255,.08)}
     footer{padding:22px 18px;color:#6b7280;text-align:center}
     ul{margin:10px 0 0 18px}
+
+    
+/* ===== SPEAKERS (TOP-CONFERENCE STYLE) ===== */
+.speakers-wrap{
+  max-width: 1050px;
+  margin: 0 auto;
+  padding: 0 18px;
+}
+
+.speakers-grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+}
+
+.speaker-card{
+  background: rgba(255,255,255,0.75);
+  border: 1px solid rgba(229,231,235,0.9);
+  border-radius: 18px;
+  overflow: hidden;
+  box-shadow: 0 10px 28px rgba(0,0,0,0.08);
+  backdrop-filter: blur(10px);
+  transition: transform .15s ease, box-shadow .15s ease;
+}
+
+.speaker-card:hover{
+  transform: translateY(-3px);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.12);
+}
+
+.speaker-photo{
+  height: 210px;
+  background-size: cover;
+  background-position: center;
+  background-color: #eef2ff;
+}
+
+.speaker-photo.placeholder{
+  background-image:
+    radial-gradient(circle at 20% 20%, rgba(96,165,250,.9), rgba(96,165,250,0) 55%),
+    radial-gradient(circle at 80% 30%, rgba(52,211,153,.8), rgba(52,211,153,0) 55%),
+    linear-gradient(135deg, #e0e7ff, #f8fafc);
+}
+
+.speaker-body{
+  padding: 14px 14px 16px;
+}
+
+.speaker-name{
+  font-weight: 800;
+  font-size: 16px;
+  margin: 0 0 4px;
+}
+
+.speaker-affil{
+  color: #6b7280;
+  font-size: 14px;
+  margin: 0 0 10px;
+}
+
+.speaker-links{
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  font-size: 13px;
+}
+
+.speaker-links a{
+  text-decoration: none;
+  color: #2563eb;
+  font-weight: 600;
+}
+
+.speaker-links a:hover{
+  text-decoration: underline;
+}
+ /* ===== End SPEAKERS (TOP-CONFERENCE STYLE) ===== */ 
+    
   </style>
 </head>
 <body>
@@ -185,13 +263,39 @@
 </section>
 
 <section id="speakers">
-  <div class="wrap">
+  <div class="speakers-wrap">
     <h2>Invited Speakers</h2>
-    <p class="muted">Replace the placeholder names once confirmed.</p>
-    <div class="grid">
-      <div class="card"><h3>Speaker Name (TBA)</h3><p class="muted">Affiliation</p><p><a href="#">Website</a> · <a href="#">Scholar</a></p></div>
-      <div class="card"><h3>Speaker Name (TBA)</h3><p class="muted">Affiliation</p><p><a href="#">Website</a> · <a href="#">Scholar</a></p></div>
-      <div class="card"><h3>Speaker Name (TBA)</h3><p class="muted">Affiliation</p><p><a href="#">Website</a> · <a href="#">Scholar</a></p></div>
+    <p class="muted">More speakers will be announced soon.</p>
+
+    <div class="speakers-grid">
+
+      <!-- Speaker 1 -->
+      <article class="speaker-card">
+        <div class="speaker-photo" style="background-image:url('assets/speakers/shuo.png');"></div>
+        <div class="speaker-body">
+          <div class="speaker-name">Shuo Huang</div>
+          <div class="speaker-affil">University of Somewhere</div>
+          <div class="speaker-links">
+            <a href="https://example.com" target="_blank" rel="noopener">Website</a>
+            <a href="https://scholar.google.com" target="_blank" rel="noopener">Scholar</a>
+          </div>
+        </div>
+      </article>
+
+  
+
+      <!-- Placeholder (no photo yet) -->
+      <article class="speaker-card">
+        <div class="speaker-photo placeholder"></div>
+        <div class="speaker-body">
+          <div class="speaker-name">TBA</div>
+          <div class="speaker-affil">To be announced</div>
+          <div class="speaker-links">
+            <span class="muted">Details coming soon</span>
+          </div>
+        </div>
+      </article>
+
     </div>
   </div>
 </section>
