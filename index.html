@@ -148,12 +148,22 @@
   box-shadow: 0 16px 40px rgba(0,0,0,0.12);
 }
 
+.speaker-photo {
+  width: 160px;
+  height: 160px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
+  margin: 0 auto 12px;
+}
+
+    /* 
 .speaker-photo{
   height: 210px;
   background-size: cover;
   background-position: center;
   background-color: #eef2ff;
-}
+} */
 
 .speaker-photo.placeholder{
   background-image:
@@ -195,6 +205,44 @@
   text-decoration: underline;
 }
  /* ===== End SPEAKERS (TOP-CONFERENCE STYLE) ===== */ 
+
+/* ===== ORGANIZERS ===== */
+
+.organizers-wrap{
+  max-width: 1050px;
+  margin: 0 auto;
+  padding: 0 18px;
+}
+
+.organizers-grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 16px;
+}
+
+.organizer-card{
+  text-align: center;
+}
+
+.organizer-photo{
+  width: 140px;
+  height: 140px;
+  margin: 0 auto 12px;
+  border-radius: 50%;
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+
+.organizer-name{
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.organizer-affil{
+  color: #6b7280;
+  font-size: 14px;
+}
     
   </style>
 </head>
@@ -348,24 +396,33 @@
 </section>
 
 <section id="organizers">
-  <div class="wrap">
+  <div class="organizers-wrap">
     <h2>Organizers</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>Shuo Huang</h3>
-        <p class="muted">Italian Institute of Technology (IIT)</p>
-        <p><a href="#">Website</a> · <a href="#">Google Scholar</a></p>
+
+    <div class="organizers-grid">
+
+      <!-- Organizer 1 -->
+      <div class="organizer-card">
+        <div class="organizer-photo"
+             style="background-image:url('assets/organizers/shuo.jpg');">
+        </div>
+        <div class="organizer-name">Shuo Huang</div>
+        <div class="organizer-affil">
+          Italian Institute of Technology
+        </div>
       </div>
-      <div class="card">
-        <h3>Co-organizer (TBA)</h3>
-        <p class="muted">Affiliation</p>
-        <p><a href="#">Website</a> · <a href="#">Google Scholar</a></p>
+
+      <!-- Organizer 2 -->
+      <div class="organizer-card">
+        <div class="organizer-photo"
+             style="background-image:url('assets/organizers/coorganizer.jpg');">
+        </div>
+        <div class="organizer-name">Co-organizer Name</div>
+        <div class="organizer-affil">
+          University / Institution
+        </div>
       </div>
-      <div class="card">
-        <h3>Co-organizer (TBA)</h3>
-        <p class="muted">Affiliation</p>
-        <p><a href="#">Website</a> · <a href="#">Google Scholar</a></p>
-      </div>
+
     </div>
   </div>
 </section>
