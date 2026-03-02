@@ -243,6 +243,75 @@
   color: #6b7280;
   font-size: 14px;
 }
+
+
+/* ===== Clean Program Table ===== */
+
+.program-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 16px;
+  font-size: 16px;
+}
+
+.program-table th {
+  text-align: left;
+  font-weight: 700;
+  padding: 14px 12px;
+  border-bottom: 2px solid #e5e7eb;
+  font-size: 17px;
+}
+
+.program-table td {
+  padding: 14px 12px;
+  vertical-align: top;
+  border-bottom: 1px solid #f1f5f9;
+}
+
+.program-table td:first-child {
+  width: 140px;
+  font-variant-numeric: tabular-nums;
+  font-weight: 600;
+}
+
+.program-table td:nth-child(2) {
+  width: 220px;
+  font-weight: 600;
+}
+
+.program-table tr:hover {
+  background: #f9fafb;
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .program-table,
+  .program-table thead,
+  .program-table tbody,
+  .program-table th,
+  .program-table td,
+  .program-table tr {
+    display: block;
+  }
+
+  .program-table thead {
+    display: none;
+  }
+
+  .program-table tr {
+    margin-bottom: 16px;
+    border-bottom: 1px solid #e5e7eb;
+  }
+
+  .program-table td {
+    border: none;
+    padding: 6px 0;
+  }
+
+  .program-table td:first-child {
+    font-weight: 700;
+  }
+}
     
   </style>
 </head>
@@ -362,18 +431,69 @@
 <section id="program">
   <div class="wrap">
     <h2>Draft Program</h2>
-    <div class="card">
-      <ul>
-        <li>09:00–09:10 Opening</li>
-        <li>09:10–09:50 Keynote (TBA)</li>
-        <li>09:50–10:30 Invited talk (TBA)</li>
-        <li>10:30–10:50 Coffee break</li>
-        <li>10:50–11:30 Invited talk (TBA)</li>
-        <li>11:30–12:10 Posters / short talks (optional)</li>
-        <li>12:10–12:30 Panel / open problems</li>
-        <li>12:30 Closing</li>
-      </ul>
-    </div>
+
+    <table class="program-table">
+      <thead>
+        <tr>
+          <th>Time</th>
+          <th>Session</th>
+          <th>Description</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>09:00–09:10</td>
+          <td>Opening</td>
+          <td>Welcome and introduction</td>
+        </tr>
+        <tr>
+          <td>09:10–09:40</td>
+          <td>Invited Talk 1</td>
+          <td>Invited talk (25 mins Pre + 5 mins Q&amp;A)</td>
+        </tr>
+        <tr>
+          <td>09:40–10:10</td>
+          <td>Invited Talk 2</td>
+          <td>Invited talk (25 mins Pre + 5 mins Q&amp;A)</td>
+        </tr>
+        <tr>
+          <td>10:10–10:40</td>
+          <td>Regular Paper</td>
+          <td>2 regular papers (15 mins each) </td>
+        </tr>
+        <tr>
+          <td>10:40–11:00</td>
+          <td>Coffee Break</td>
+          <td>poster presentations and informal discussion</td>
+        </tr>
+        <tr>
+          <td>11:00–11:30</td>
+          <td>Invited Talk 3</td>
+          <td>Invited talk (25 mins Pre + 5 mins Q&amp;A)</td>
+        </tr>
+        <tr>
+          <td>11:30–12:00</td>
+          <td>Invited Talk 4</td>
+          <td>Invited talk (25 mins Pre + 5 mins Q&amp;A)</td>
+        </tr>
+       <tr>
+          <td>12:00-12:30</td>
+          <td>Regular Paper</td>
+          <td>2 regular papers (15 mins each)</td>
+        </tr>
+        <tr>
+          <td>12:30-12:40</td>
+          <td>Closing</td>
+          <td>Wrap-up </td>
+        </tr>
+        <tr>
+          <td>12:40-13:00</td>
+          <td>Free discussion</td>
+          <td>poster presentations and informal discussion</td>
+        </tr>
+      </tbody>
+    </table>
+
   </div>
 </section>
 
